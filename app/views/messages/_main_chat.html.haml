@@ -1,0 +1,37 @@
+.main-chat
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        techcamp
+      %ul.main-header__left-box__member-list
+        Member :
+        %li.main-header__left-box__member-list__member
+          hoge
+    = link_to "#", class: "main-header__right" do
+      .main-header__right__edit-btn
+        Edit
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          hoge
+        %p.message__upper-info__date
+          2020/05/10(sun) 10:00:00
+      %p.message__text
+        おはよう！
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          hoge
+        %p.message__upper-info__date
+          2020/05/10(sun) 14:00:00
+      %p.message__text
+        今日は午後から雨
+  .form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon("far", "image")
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "Send"}
