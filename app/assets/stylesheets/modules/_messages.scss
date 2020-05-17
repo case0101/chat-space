@@ -1,3 +1,7 @@
+.field_with_errors {
+  display: contents;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -104,6 +108,7 @@
     }
   }
   .messages {
+    overflow: scroll;
     background-color: $messages_back;
     height: calc(100vh - #{$header_height} - #{$form_height});
     padding: 35px 40px;
@@ -123,7 +128,7 @@
           margin-left: 10px;
         }
       }
-      &__text {
+      &__lower__content {
         color: #434a54;
         font-size: 14px;
       }
@@ -136,6 +141,7 @@
     form {
       display: flex;
       .input-box {
+        background-color: $true_white;
         display: flex;
         position: relative;
         height: 50px;
